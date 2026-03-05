@@ -11,7 +11,10 @@ from models.project import Project
 from models.user import User
 import utils.storage as storage
 
-
+def test_task_defaults():
+    t = Task("Write docs")
+    assert t.title == "Write docs" and t.status == "pending"
+    
 def test_task_complete():
     t = Task("Deploy")
     t.complete()
