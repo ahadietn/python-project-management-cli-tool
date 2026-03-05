@@ -71,7 +71,7 @@ def test_user_empty_name_raises():
 def test_user_add_project():
     u = User("Jordan")
     u.add_project(Project("Dashboard"))
-    assert len(u.projects) == 0
+    assert len(u.projects) == 1
 
 def test_user_find_project_case_insensitive():
     u = User("Sam")
